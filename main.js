@@ -14,9 +14,6 @@ const zipFilePath = path.join(__dirname, "myfile.zip");
 const pathUnzipped = path.join(__dirname, "unzipped");
 const pathProcessed = path.join(__dirname, "grayscaled");
 
-const zlib = require("zlib")
-const fs = require("fs")
-const unzipper = require("unzipper")
 
 //Step 1: unzip myfile.zip
 // --> fs.createReadStream(zipFile)  | currently a stream
@@ -36,3 +33,9 @@ const unzipper = require("unzipper")
 // fs.createReadStream(zipFilePath)
 // .pipe(unzipper.Extract({ path: pathUnzipped }));
 
+// IOHandler.unzip()
+//  .then(() => IOHandler.readDir())
+//  .then(() => IOHandler.grayScale())
+//  .catch(err => console.log(err))
+
+// IOhandler.unzip(zipFilePath, pathUnzipped)
