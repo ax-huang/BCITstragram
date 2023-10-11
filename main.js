@@ -39,3 +39,6 @@ const pathProcessed = path.join(__dirname, "grayscaled");
 //  .catch(err => console.log(err))
 
 // IOhandler.unzip(zipFilePath, pathUnzipped)
+
+IOhandler.readDir(pathUnzipped)
+.then(data => console.log(data))
