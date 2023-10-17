@@ -26,7 +26,7 @@ IOhandler.unzip(zipFilePath, pathUnzipped)
     for(let i = 0; i < data.length; i++){
         const imagePath = path.join(pathUnzipped, data[i]);
         const imgOutputPath = path.join(pathProcessed, data[i]);
-        promises.push(IOhandler.grayScale(imagePath,imgOutputPath))
+        promisesArray.push(IOhandler.grayScale(imagePath,imgOutputPath))
 
     }
     return promisesArray
